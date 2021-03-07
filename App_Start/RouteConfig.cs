@@ -13,17 +13,7 @@ namespace WebApplication3
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "StudentController",
-                url:"{controller}/{action}/{id}",
-                defaults:new { controller= "Student", action="Index",id=UrlParameter.Optional}
-                );
-            routes.MapRoute(
-                name: "Student",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Student", action = "StudentAbout", id = UrlParameter.Optional }
-                );
-
+           
             routes.MapRoute(
                 name:"Index1",
                 url:"{controller}/{action}/{id}",
@@ -35,6 +25,17 @@ namespace WebApplication3
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+               name: "StudentController",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Student", action = "Index", id = UrlParameter.Optional }
+               );
+            routes.MapRoute(
+                name: "Student",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Student", action = "StudentAbout", id = UrlParameter.Optional }
+                );
+
         }
     }
 }
