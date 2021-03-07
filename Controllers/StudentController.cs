@@ -14,6 +14,10 @@ namespace WebApplication3.Controllers
             ViewBag.StrDiv = "put this message in student div";
             return View();
         }
+        public string StudentAddress(int id, string stradd = "supriyaadd")
+        {
+            return id + " " + stradd;
+        }
         public ActionResult StudentAbout(int id)
         {
             if(id==1)
