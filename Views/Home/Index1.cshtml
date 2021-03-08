@@ -108,6 +108,22 @@
             <div>fact ==== @fact</div>
         </div>
 
+        <div>
+            <div>
+                Html Helper
+
+                @helper mylisthelper(String[] str)
+                {foreach (var item in str)
+                    {
+                        <h1> @item</h1>
+                    }
+                }
+
+                <div>
+                    @mylisthelper(new string[] { "supriya", "Kshirsagar" })
+                </div>
+            </div>
+        </div>
 
     </body>
 
