@@ -89,21 +89,25 @@
             </div>
         </div>
 
-        @{ 
-            var mylistint = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
-            Employee e = new Employee() { id = 1, name = "supriya", address = "abc", salary=100000 };
-             
-            
+        <div>
+            @{
+                var mylistint = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+                Employee e = new Employee() { id = 1, name = "supriya", address = "abc", salary = 100000 };
 
-        }
-        
-       <div> @e.id @e.name @e.address @e.salary</div>
-        @foreach (var i in mylistint)
-        {
-            <h5>@i </h5>
-            fact = fact + i;
-        }
-        <div>fact ==== @fact</div>
+
+
+            }
+
+            <div> @e.id @e.name @e.address @e.salary</div>
+            @foreach (var i in mylistint)
+            {
+                <h5>@i </h5>
+                fact = fact + i;
+            }
+            <div>fact ==== @fact</div>
+        </div>
+
+
     </body>
 
 </html>
