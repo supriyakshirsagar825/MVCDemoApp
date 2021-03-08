@@ -12,7 +12,7 @@ namespace WebApplication3.Controllers
         public ActionResult Index()
         {
             ViewBag.StrDiv = "put this message in student div";
-            return View();
+            return View("~/Views/myview/Mytestview.cshtml");
         }
         public string StudentAddress(int id, string stradd = "supriyaadd")
         {
