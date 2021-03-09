@@ -8,6 +8,10 @@ namespace WebApplication3.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult part11()
+        {
+            return View();
+        }
         public ActionResult Index1()
         {
             ViewBag.Message = "my first index page viewbag message";

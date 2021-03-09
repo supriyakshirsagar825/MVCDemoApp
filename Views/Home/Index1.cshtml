@@ -13,129 +13,134 @@
     <title>Index1</title>
 </head>
 
-    <body>
+<body>
+    @Html.ActionLink("page11", "part11", "Home")
+    @Html.ActionLink("StudentAddresspage", "StudentAddress","Student",new { id=1,stradd="123centerlanr" },null)
+    @Html.ActionLink("IndexPage","Index","Student")
+    @Html.ActionLink("StudentAboutPage", "StudentAbout", "Student", new { id=1},null)
+    @Html.ActionLink("StudentContactPage", "StudentContactPage", "Student",new { msg="helloo   "},null)<br/>
+   
+
+    <div>
+        <a href="/Student/StudentAddress?id=1&stradd=supriyaadd12345">StudentAddress</a><br />
+        <a href="/Student/Index"> student Index page</a><br />
+        <a href="/Student/StudentAbout?id=1">StudentAbout page</a><br />
+        <a href="/Student/StudentContactPage?msg=hello every one">StudentContactPage</a>
+        <a href="/Employee/Index">Employee</a>
+    </div>
+
+
+
+    <div>
         <div>
-            <div>
-                @ViewBag.Message +" Date"+ @DateTime.Now
-            </div>
-            <div>
-                @((5 - 3) * (10 - 5))
-            </div>
-            <div>
-                @{
-                    var a = 1;
-                    var b = 2;
-                    var c = a + b;
-                    var d = a * b;
-                    var currenttime = DateTime.Now;
-                    var tommdatetime = DateTime.Now.AddDays(1);
-                    List<string> colorlist = new List<string> { "red", "green", "blue" };
-                }
-            </div>
-            <div>
-                <label>
-                    @colorlist.FirstOrDefault()
-                    supriyakshir@gmail.com
-                    @@supriya
-                </label>
-            </div>
-            <div>
-                today dtetime = @currenttime
-                </br>
-                tommarowdtae=@tommdatetime
-                <label>@c</label>
-                <label>@d</label>
-
-            </div>
-            <div>
-                <a href="/Student/StudentAddress?id=1&stradd=supriyaadd12345">StudentAddress</a><br />
-                <a href="/Student/Index"> student Index page</a><br />
-                <a href="/Student/StudentAbout?id=1">StudentAbout page</a><br />
-                <a href="/Student/StudentContactPage?msg=hello every one">StudentContactPage</a>
-                <a href="/Employee/Index">Employee</a>
-            </div>
-
-            <div>
-                @{ bool istrue = true;
-                    int i1 = 1;
-                }
-
-
-                @if (istrue)
-                {
-                    if (i1 == 1)
-                    {
-                        <h1>hello i am from if block with i value 1</h1>
-                    }
-                }
-                else
-                {
-                    <h1> i am from else block</h1>
-
-                }
-                @{ int fact = 1;}
-
-                @for (int i = 1; i <= 5; i++)
-                {
-                    fact = fact * i;
-                    <h4> I am from for loop @i </h4>
-                }
-                <div>
-                    <label>
-                        factroril= @fact
-                    </label>
-                </div>
-                @(i1==1 ? "a" : "b" )
-
-            </div>
+            @ViewBag.Message +" Date"+ @DateTime.Now
         </div>
-
+        <div>
+            @((5 - 3) * (10 - 5))
+        </div>
         <div>
             @{
-                var mylistint = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
-                Employee e = new Employee() { id = 1, name = "supriya", address = "abc", salary = 100000 };
-
-
-
+                var a = 1;
+                var b = 2;
+                var c = a + b;
+                var d = a * b;
+                var currenttime = DateTime.Now;
+                var tommdatetime = DateTime.Now.AddDays(1);
+                List<string> colorlist = new List<string> { "red", "green", "blue" };
             }
-
-            <div> @e.id @e.name @e.address @e.salary</div>
-            @foreach (var i in mylistint)
-            {
-                <h5>@i </h5>
-                fact = fact + i;
-            }
-            <div>fact ==== @fact</div>
         </div>
+        <div>
+            <label>
+                @colorlist.FirstOrDefault()
+                supriyakshir@gmail.com
+                @@supriya
+            </label>
+        </div>
+        <div>
+            today dtetime = @currenttime
+            </br>
+            tommarowdtae=@tommdatetime
+            <label>@c</label>
+            <label>@d</label>
+
+        </div>
+
 
         <div>
-            <div>
-                Html Helper
+            @{ bool istrue = true;
+                int i1 = 1;
+            }
 
-                @helper mylisthelper(String[] str)
-                {foreach (var item in str)
-                    {
-                        <h1> @item</h1>
-                    }
+
+            @if (istrue)
+            {
+                if (i1 == 1)
+                {
+                    <h1>hello i am from if block with i value 1</h1>
                 }
+            }
+            else
+            {
+                <h1> i am from else block</h1>
 
-                <div>
-                    @mylisthelper(new string[] { "supriya", "Kshirsagar" })
-                </div>
+            }
+            @{ int fact = 1;}
+
+            @for (int i = 1; i <= 5; i++)
+            {
+                fact = fact * i;
+                <h4> I am from for loop @i </h4>
+            }
+            <div>
+                <label>
+                    factroril= @fact
+                </label>
+            </div>
+            @(i1==1 ? "a" : "b" )
+
+        </div>
+    </div>
+
+    <div>
+        @{
+            var mylistint = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+            Employee e = new Employee() { id = 1, name = "supriya", address = "abc", salary = 100000 };
+
+
+
+        }
+
+        <div> @e.id @e.name @e.address @e.salary</div>
+        @foreach (var i in mylistint)
+        {
+            <h5>@i </h5>
+            fact = fact + i;
+        }
+        <div>fact ==== @fact</div>
+    </div>
+
+    <div>
+        <div>
+            Html Helper
+
+            @helper mylisthelper(String[] str)
+            {foreach (var item in str)
+                {
+                    <h1> @item</h1>
+                }
+            }
+
+            <div>
+                @mylisthelper(new string[] { "supriya", "Kshirsagar" })
             </div>
         </div>
+    </div>
 
-        @helper Mytesthelper1(int[] num)
-            {
-foreach (var item in num)
-{
-<h3>@item</h3>
-}
-    }
-        <div></div>
-        @Mytesthelper1(new int[] { 1,2,3,4,5,6})
-        <h1> checking commits</h1>
-        chenges made in file11111
-    </body>
+    @Html.ActionLink("Home", "")
+    @Html.TextBox("txt1")
+    @Html.RadioButton("rdr1", "first")
+    @Html.BeginForm()
+    @Html.Password("txtpass")
+</body>
 
 </html>

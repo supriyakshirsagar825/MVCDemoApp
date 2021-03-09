@@ -172,6 +172,7 @@
     <Content Include="Views\Shared\StudentContactPage.cshtml" />
     <Content Include="Views\myview\Mytestview.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Home\part11.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

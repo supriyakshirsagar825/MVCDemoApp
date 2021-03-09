@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>part11</title>
+</head>
+<body>
+    <div>
+        <h4>Part 11 Standered Html helper</h4>
+
+        @{
+            var phoneno = 1234567890;
+            var id = 9;
+        }
+
+        @Html.Label("Name")
+        @Html.TextBox("txtox1", "supriya kshirsagar", new { id, @class = "Mycustomstyle", style = "width:200px" })<br />
+        @Html.Label("phone no")
+        @Html.TextBox("txtphone", phoneno, new { id, @class = "Mycustomstyle", style = "width:200px" })<br />
+        @Html.Label("Email")
+        @Html.TextBox("txtemail", "sup.kshir@gmail.com", new { id, @class = "Mycustomstyle", style = "width:200px" })<br />
+        @Html.Label("Password")
+        @Html.Password("txtPassword", "supriya", new { id, @class = "Mycustomstyle", style = "width:200px" })<br />
+        @Html.Label("chkbox")
+        @Html.CheckBox("chkbox1",true,new { })
+
+
+    </div>
+</body>
+</html>
