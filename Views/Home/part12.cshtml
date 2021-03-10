@@ -1,0 +1,37 @@
+﻿@using WebApplication3.Models
+@model EmployeeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>part12</title>
+</head>
+<body>
+    <div>
+        <h2> Strongly type html helper</h2>
+        <br />
+        Part 13 @Html.ActionLink("Part 13","part13","Home")
+        @using (Html.BeginForm("MyForm"))
+        {
+            <br/>
+            @Html.LabelFor(x=>x.Id)
+            @Html.TextBoxFor(x => x.Id)<br />
+            @Html.LabelFor(x=>x.Name)
+            @Html.TextBoxFor(x => x.Name)<br />
+            @Html.LabelFor(x=>x.Address)
+            @Html.TextBoxFor(x => x.Address)<br />
+            @Html.LabelFor(x=>x.IsEmployee)
+            @Html.CheckBoxFor(x => x.IsEmployee)<br />
+            @Html.LabelFor(x=>x.Salary)
+            @Html.TextBoxFor(x => x.Salary)<br />
+            
+            <input type="submit" value="Submitform" formaction="Part12PostMethod" class="btn btn-primary" />
+        }
+    </div>
+</body>
+</html>

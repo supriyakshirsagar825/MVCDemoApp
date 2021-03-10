@@ -1,0 +1,21 @@
+﻿@using WebApplication3.Models
+@model EmployeeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Part12PostMethod</title>
+</head>
+<body>
+    <div>
+     @{string abc = "" + @Model.Id + "submited apllication for" + @Model.Name + " Address" + @Model.Address + "salary " +
+                    @Model.Salary + " Is employee" + @Model.IsEmployee; }
+         @Html.TextArea("txt1",abc,new { style = "width:600px;" })
+    </div>
+</body>
+</html>

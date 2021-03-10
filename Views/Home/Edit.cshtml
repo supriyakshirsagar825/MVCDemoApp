@@ -1,0 +1,24 @@
+﻿@using WebApplication3.Models
+@model EmployeeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        @Html.DisplayTextFor(x => x.Id)<br/>
+        @Html.DisplayTextFor(x => x.Name)<br />
+        @Html.DisplayTextFor(x => x.DOB)<br />
+        @Html.DisplayTextFor(x => x.BirthTime)<br />
+        @Html.DisplayTextFor(x => x.Salary)<br />
+
+    </div>
+</body>
+</html>

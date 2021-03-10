@@ -1,0 +1,46 @@
+﻿@model WebApplication3.Models.EmployeeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>part13part1</title>
+</head>
+<body>
+    <div>
+        @Html.DisplayName("Id") - @Html.Editor("Id") <hr />
+
+        @Html.DisplayNameFor(x => x.Id) - @Html.EditorFor(x => x.Id) <hr />
+
+        @Html.DisplayNameFor(x => x.DOB) - @Html.EditorFor(x => x.DOB) <hr />
+
+        @Html.DisplayNameFor(x => x.BirthTime) - @Html.EditorFor(x => x.BirthTime) <hr />
+
+        @using (Html.BeginForm("myform"))
+        {
+
+        @Html.EditorForModel()
+        <input type="submit" value="Submit Form" formaction="Edit"/>
+        }
+
+    </div>
+</body>
+</html>
+<style>
+    .editor-label{
+        background-color:lightpink;
+        width:450px;
+        padding:5px;
+        border-radius:6px;
+    }
+    .editor-field{
+        background-color:mediumpurple;
+        width:400px;
+        padding-left:50px;
+        border-radius:6px;
+    }
+</style>

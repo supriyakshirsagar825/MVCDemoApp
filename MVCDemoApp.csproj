@@ -127,6 +127,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +174,11 @@
     <Content Include="Views\myview\Mytestview.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Home\part11.cshtml" />
+    <Content Include="Views\Home\part12.cshtml" />
+    <Content Include="Views\Home\Part12PostMethod.cshtml" />
+    <Content Include="Views\Home\part13.cshtml" />
+    <Content Include="Views\Home\part13part1.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
