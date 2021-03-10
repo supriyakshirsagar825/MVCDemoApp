@@ -12,6 +12,11 @@
 </head>
 <body>
     <div>
+        @CustomHelper.ImageHelper("pic.jpg", "this is custom image")
+        @Html.ImageHelperNew("pic.jpg","this is new tag")
+        @Html.ImageHelperWithTag("pic.jpg","this is with tag builder")
+
+
         @Html.DisplayName("Id") - @Html.Editor("Id") <hr />
 
         @Html.DisplayNameFor(x => x.Id) - @Html.EditorFor(x => x.Id) <hr />
