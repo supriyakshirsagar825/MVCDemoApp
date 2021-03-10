@@ -5,10 +5,38 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication3.Models;
 
+
 namespace WebApplication3.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult VBVD()
+        {
+            ViewBag.Message = "View Bag Example";
+            ViewBag.MyList = new List<string> { "supriya", "pankaj", "shreddha", "seema" };
+            List<Employee> emp = new List<Employee>()
+            {
+                new Employee(){id=1,name="abc",address="abc address",salary=100000},
+                new Employee(){id=2,name="xyz",address="xyz address",salary=200000},
+                new Employee(){id=3,name="pqr",address="pqr address",salary=300000},
+
+            };
+            ViewBag.EmpList = emp;
+
+            List<Employee> emp1 = new List<Employee>()
+            {
+                new Employee(){id=11,name="abc1",address="abc1 address",salary=100000},
+                new Employee(){id=21,name="xyz1",address="xyz1 address",salary=200000},
+                new Employee(){id=31,name="pqr1",address="pqr1 address",salary=300000},
+
+            };
+          
+            ViewData["Message1"] = "View Data Example1";
+            ViewData["MyList1"] = new List<string> { "supriya1", "pankaj1", "shreddha1", "seema1" };
+            ViewData["EmpList1"] = emp1;
+
+            return View();
+        }
         public ActionResult part11()
         {
             

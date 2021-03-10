@@ -1,0 +1,56 @@
+﻿@using WebApplication3.Models
+@model Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VBVD</title>
+</head>
+<body>
+    <div> 
+        <h4> @ViewBag.Message</h4>
+        <div>
+            <ul>
+               @foreach (var item in ViewBag.MyList)
+               {
+                   <li>@item</li>
+               }
+            </ul>
+        </div>
+        <div>
+            <ul>
+                @foreach(var item in @ViewBag.EmpList)
+                {
+                    <li> @item.id   @item.name  @item.address  @item.salary  </li>
+                }
+            </ul>
+        </div>
+
+        <h4> @ViewData["Message1"]</h4>
+        <div>
+            <ul>
+                @foreach(var item in (List<string>)ViewData["MyList1"])
+                {
+                    <li>
+                        @item
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                @foreach (var item in (List<Employee>)ViewData["EmpList1"])
+                {
+                    <li> @item.id   @item.name  @item.address  @item.salary  </li>
+                }
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

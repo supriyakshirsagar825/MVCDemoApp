@@ -181,6 +181,7 @@
     <Content Include="Views\Home\part13.cshtml" />
     <Content Include="Views\Home\part13part1.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\VBVD.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
