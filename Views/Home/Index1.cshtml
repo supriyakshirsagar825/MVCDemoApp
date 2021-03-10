@@ -11,15 +11,38 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index1</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 
 <body>
-    @Html.ActionLink("page11", "part11", "Home")
-    @Html.ActionLink("StudentAddresspage", "StudentAddress","Student",new { id=1,stradd="123centerlanr" },null)
-    @Html.ActionLink("IndexPage","Index","Student")
-    @Html.ActionLink("StudentAboutPage", "StudentAbout", "Student", new { id=1},null)
-    @Html.ActionLink("StudentContactPage", "StudentContactPage", "Student",new { msg="helloo   "},null)<br/>
-   
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>  @Html.ActionLink("Part11", "part11", "Home")<br /></li>
+
+                    <li>
+                        @Html.ActionLink("Student Address Page", "StudentAddress", "Student", new { id = 1, stradd = "123centerlanr" }, null)
+                        <br />
+                    </li>
+
+                    <li>
+                        @Html.ActionLink("Index Page", "Index", "Student")
+                        <br />
+                    </li>
+                    <li>
+                        @Html.ActionLink("Student About Page", "StudentAbout", "Student", new { id = 1 }, null)
+                        <br />
+                    </li>
+                    <li>
+                        @Html.ActionLink("StudentContactPage", "StudentContactPage", "Student", new { msg = "helloo   " }, null)
+                        <br />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <div>
         <a href="/Student/StudentAddress?id=1&stradd=supriyaadd12345">StudentAddress</a><br />
@@ -141,6 +164,9 @@
     @Html.RadioButton("rdr1", "first")
     @Html.BeginForm()
     @Html.Password("txtpass")
-</body>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    </body>
 
 </html>
