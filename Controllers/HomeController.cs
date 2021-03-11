@@ -94,9 +94,10 @@ namespace WebApplication3.Controllers
             ViewBag.Message = "my first index page viewbag message";
             return View();
         }
-        public string Index()
+        public ActionResult Index()
         {
-            return "first return from index mentod";//View();
+           // return "first return from index mentod";
+           return View();
         }
 
         public ActionResult About()

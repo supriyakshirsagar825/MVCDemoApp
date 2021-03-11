@@ -123,6 +123,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="CustomHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -182,6 +183,9 @@
     <Content Include="Views\Home\part13part1.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Home\VBVD.cshtml" />
+    <Content Include="Views\TempData\Index.cshtml" />
+    <Content Include="Views\TempData\Index1.cshtml" />
+    <Content Include="Views\TempData\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
