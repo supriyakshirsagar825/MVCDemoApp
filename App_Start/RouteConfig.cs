@@ -13,6 +13,18 @@ namespace WebApplication3
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+                name:"allstudent",
+                url:"getallstudent",
+                defaults:new { controller ="Student",action= "GetAllStudent", id=UrlParameter.Optional}
+                );
+
+            routes.MapRoute(
+                name:"GetSingleStudent",
+                url:"GetStudentbyidurl",
+                defaults: new { controller= "Student", action= "GetStudentById", id=UrlParameter.Optional}
+                );
+
            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

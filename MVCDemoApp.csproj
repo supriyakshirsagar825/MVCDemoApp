@@ -124,12 +124,15 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TempDataController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="CustomHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -186,9 +189,13 @@
     <Content Include="Views\TempData\Index.cshtml" />
     <Content Include="Views\TempData\Index1.cshtml" />
     <Content Include="Views\TempData\Index2.cshtml" />
+    <Content Include="Views\Student\GetAllStudent.cshtml" />
+    <Content Include="Views\Student\GetStudentById.cshtml" />
+    <Content Include="Views\Student\GetStudentAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
