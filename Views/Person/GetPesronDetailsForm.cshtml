@@ -1,0 +1,30 @@
+﻿@model WebApplication3.Models.Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetPesronDetailsForm</title>
+</head>
+<body>
+    <div>
+        <div>
+            @using (Html.BeginForm("persondetailswithstronlybinding", "Person", FormMethod.Post))
+            {
+                <h1> Validation Summary </h1>
+                @Html.ValidationSummary()
+                @Html.DisplayName("FirstName") @Html.TextBoxFor(x=>x.FirstName) @Html.ValidationMessageFor(x=>x.FirstName) <br />
+                @Html.DisplayName("LastName") @Html.TextBoxFor(x=>x.LastName) @Html.ValidationMessageFor(x=>x.LastName) <br />
+                @Html.DisplayName("Age") @Html.TextBoxFor(x=>x.Age) @Html.ValidationMessageFor(x=>x.Age) <br />
+                @Html.DisplayName("Email")@Html.TextBoxFor(x=>x.Email) @Html.ValidationMessageFor(x=>x.Email) <br />
+                @Html.DisplayName("Salary")@Html.TextBoxFor(x=>x.Salary) @Html.ValidationMessageFor(x=>x.Salary) <br />
+                <input type="submit" value="sumitform" />
+            }
+        </div>
+    </div>
+</body>
+</html>

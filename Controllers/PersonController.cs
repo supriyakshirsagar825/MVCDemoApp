@@ -15,13 +15,30 @@ namespace WebApplication3.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult GetPersonDetails(Person p)
+        public ActionResult PostPersonDetails(Person p)
         {
             if(ModelState.IsValid)
             {
-                return View("GetPersonDetails",p);
+                return View(p);
             }
             return View("Index");
         }
+
+        [HttpGet]
+        public ActionResult GetPesronDetailsForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult persondetailswithstronlybinding(Person p)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(p);
+            }
+            return View("GetPesronDetailsForm");
+        }
+
+
     }
 }
