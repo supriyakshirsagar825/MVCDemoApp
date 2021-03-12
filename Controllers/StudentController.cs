@@ -7,6 +7,7 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
+    [RoutePrefix("students")]
     public class StudentController : Controller
     {
         // GET: Student
@@ -15,16 +16,38 @@ namespace WebApplication3.Controllers
             ViewBag.StrDiv = "put this message in student div";
             return View("~/Views/myview/Mytestview.cshtml");
         }
+        [Route("")]
         public ActionResult GetAllStudent()
         {
             var student = GetStudents();
             return View(student);
         }
+        [Route("{id:int}")]
         public ActionResult GetStudentById(int id)
         {
             var student = GetStudents().FirstOrDefault(d => d.StudentId == id);
             return View(student);
         }
+        [Route("~/about-us")]
+        [Route("~/aboutus")]
+        public string Aboutus()
+        {
+            return "this is about us";
+        }
+        [Route("getname/{name}")]
+        public string GetName(string name)
+        {
+            var student = GetStudents().FirstOrDefault(d => d.StudentName == name);
+            if (student!= null)
+            {
+                return student.StudentName.ToString();
+            }
+            else
+            {
+                return "no data found";
+            }
+        }
+        [Route("{id}/address")]
         public ActionResult GetStudentAddress(int id)
         {
             var StudentAddress = GetStudents().Where(d => d.StudentId == id).Select(x => x.StudentAddress).FirstOrDefault();

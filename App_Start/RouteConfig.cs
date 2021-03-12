@@ -18,25 +18,26 @@ namespace WebApplication3
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapMvcAttributeRoutes();
 
-            routes.MapRoute(
-                name:"allstudent",
-                url:"student",
-                defaults:new { controller ="Student",action= "GetAllStudent", id=UrlParameter.Optional}
-                );
+            //routes.MapRoute(
+            //    name:"allstudent",
+            //    url:"student",
+            //    defaults:new { controller ="Student",action= "GetAllStudent", id=UrlParameter.Optional}
+            //    );
 
-            routes.MapRoute(
-                name:"GetSingleStudent",
-                url:"student/{id}",
-                defaults: new { controller= "Student", action= "GetStudentById", id=UrlParameter.Optional},
-                constraints: new { id = @"\d+" }
-                );
+            //routes.MapRoute(
+            //    name:"GetSingleStudent",
+            //    url:"student/{id}",
+            //    defaults: new { controller= "Student", action= "GetStudentById", id=UrlParameter.Optional},
+            //    constraints: new { id = @"\d+" }
+            //    );
 
-            routes.MapRoute(
-                name:"getaddress",
-                url:"student/{id}/address",
-                defaults:new { controller="Student" , action= "GetStudentAddress", id=UrlParameter.Optional }
-                );
+            //routes.MapRoute(
+            //    name:"getaddress",
+            //    url:"student/{id}/address",
+            //    defaults:new { controller="Student" , action= "GetStudentAddress", id=UrlParameter.Optional }
+            //    );
 
            routes.MapRoute(
                 name: "Default",
