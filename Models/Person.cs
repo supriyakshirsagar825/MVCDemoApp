@@ -9,6 +9,7 @@ namespace WebApplication3.Models
     public class Person
     {
         [Required(ErrorMessage ="Please Enter provide First Name ....")]
+        [SupriyaValidation]
         public string FirstName { get; set; }
         [Required(ErrorMessage ="please enter provide Last name ....")]
         public string LastName { get; set; }
