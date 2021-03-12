@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -193,6 +195,8 @@
     <Content Include="Views\Student\GetStudentById.cshtml" />
     <Content Include="Views\Student\GetStudentAddress.cshtml" />
     <Content Include="Views\Home\PassDataFromViewToController.cshtml" />
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Person\GetPersonDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
