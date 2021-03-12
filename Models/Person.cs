@@ -8,8 +8,8 @@ namespace WebApplication3.Models
 {
     public class Person
     {
-        [Required(ErrorMessage ="Please Enter provide First Name ....")]
-        [SupriyaValidation]
+        //[Required(ErrorMessage ="Please Enter provide First Name ....")]
+        [SupriyaValidation(ErrorMessage = "the must contain supriya ")]
         public string FirstName { get; set; }
         [Required(ErrorMessage ="please enter provide Last name ....")]
         public string LastName { get; set; }

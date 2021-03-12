@@ -12,12 +12,13 @@ namespace WebApplication3
         {
             if(value!=null)
             {
-                if(value.ToString().Contains("supriya"))
-                    { 
+                if (value.ToString().Contains("supriya"))
+                {
                     return ValidationResult.Success;
                 }
             }
-            return new ValidationResult("the field does not contain supriya ");
+            ErrorMessage = ErrorMessage ?? validationContext.DisplayName+ " the field does not contain supriya ";
+            return new ValidationResult(ErrorMessage);
         }
     }
 }

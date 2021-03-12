@@ -34,6 +34,7 @@ namespace WebApplication3.Controllers
         {
             if (ModelState.IsValid)
             {
+                ModelState.Clear();
                 return View(p);
             }
             return View("GetPesronDetailsForm");
