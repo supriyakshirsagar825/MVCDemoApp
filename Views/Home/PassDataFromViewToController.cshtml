@@ -1,0 +1,56 @@
+﻿@model WebApplication3.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PassDataFromViewToController</title>
+</head>
+<body>
+    <div>
+
+        <h3>PostDataByParameter</h3>
+        @using (Html.BeginForm("PostDataByParameter", "Home"))
+        {
+            <input type="text" name="FirstName" />
+            <input type="text" name="LastName" />
+            <input type="submit" value="Click here" />
+        }
+    </div>
+    <hr />
+    <div>
+        <h3>PostDataByRequest</h3>
+        @using (Html.BeginForm("PostDataByRequest", "Home"))
+        {
+            <input type="text" name="FirstName" />
+            <input type="text" name="LastName" />
+            <input type="submit" value="Click here" />
+        }
+    </div>
+    <hr />
+    <div>
+        <h3>PostDataByFormCollection</h3>
+        @using (Html.BeginForm("PostDataByFormCollection", "Home"))
+        {
+            <input type="text" name="FirstName" />
+            <input type="text" name="LastName" />
+            <input type="submit" value="Click here" />
+        }
+    </div>
+    <hr />
+    <div>
+        <h3>PostDataByStronglyBinding</h3>
+        @using (Html.BeginForm("PostDataByStronglyBinding", "Home"))
+        {
+           @Html.TextBoxFor(x=>x.name)
+            @Html.TextBoxFor(x=>x.address)
+            
+            <input type="submit" value="Click here" />
+        }
+    </div>
+</body>
+</html>

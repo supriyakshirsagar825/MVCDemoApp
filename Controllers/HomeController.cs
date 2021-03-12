@@ -10,6 +10,41 @@ namespace WebApplication3.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
+        public ActionResult PassDataFromViewToController()
+        {
+            return View();
+        }
+        [HttpPost]
+
+        public string PostDataByParameter(string FirstName,string LastName)
+        {
+            return " PostDataByParameter   " + FirstName + "  "+ LastName;
+        }
+        [HttpPost]
+
+        public string PostDataByRequest()
+        {
+            string FirstName = Request["FirstName"];
+            string LastName = Request["LastName"];
+            return " PostDataByRequest  " + FirstName + "  " + LastName;
+        }
+        [HttpPost]
+
+        public string PostDataByFormCollection(FormCollection form)
+        {
+            string FirstName = form["FirstName"];
+            string LastName = form["LastName"];
+            return " PostDataByFormCollection  " + FirstName + "  " + LastName;
+        }
+        [HttpPost]
+
+        public string PostDataByStronglyBinding(Employee emp)
+        {
+            return " PostDataByStronglyBinding  " + emp.name + "  " + emp.address;
+        }
+
+
         public ActionResult VBVD()
         {
             ViewBag.Message = "View Bag Example";

@@ -192,6 +192,7 @@
     <Content Include="Views\Student\GetAllStudent.cshtml" />
     <Content Include="Views\Student\GetStudentById.cshtml" />
     <Content Include="Views\Student\GetStudentAddress.cshtml" />
+    <Content Include="Views\Home\PassDataFromViewToController.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
