@@ -211,11 +211,11 @@
     <Content Include="Views\Animal\Index.cshtml" />
     <Content Include="Views\Animal\PageFirst.cshtml" />
     <Content Include="Views\Animal\PageSecond.cshtml" />
+    <Content Include="Views\test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Test2\" />
-    <Folder Include="Views\test\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
