@@ -10,9 +10,14 @@ namespace WebApplication3.Controllers
     public class PersonController : Controller
     {
         // GET: Person
-        public ActionResult Index()
+        public ActionResult Index2()
         {
             return View();
+        }
+        public ActionResult Index()
+        {
+
+            return View("Index","_NewLayout");
         }
         [HttpPost]
         public ActionResult PostPersonDetails(Person p)

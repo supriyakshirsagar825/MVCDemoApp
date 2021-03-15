@@ -1,58 +1,54 @@
 ﻿@using WebApplication3.Models
 @model EmployeeModel
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
+<h3>  @Html.ActionLink("Part13- Part1", "part13part1", "Home")</h3>
+<br />
+<div>Part 13<br /> Templeted Helper</div>
+<br />
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>part13</title>
-</head>
-<body>
-    <h3>  @Html.ActionLink("Part13- Part1", "part13part1", "Home")</h3><br/>
-    <div>Part 13<br /> Templeted Helper</div><br />
-
-    1 @Html.DisplayName("Name")<br />
+    1 @Html.DisplayName("Name")
+    <br />
     2 @Html.DisplayText("Name")
     <hr />
-    3 @Html.DisplayNameFor(x => x.Name)<br />
+    3 @Html.DisplayNameFor(x => x.Name)
+    <br />
     4 @Html.DisplayTextFor(x => x.Name)
     <hr />
-    5 @Html.Display("Name")<br />
+    5 @Html.Display("Name")
+    <br />
     6 @Html.DisplayFor(x => x.Name)
-
-    <hr /><hr/>
-    7 @Html.DisplayName("DOB")<br />
+    <hr />
+    7 @Html.DisplayName("DOB")
+    <br />
     8 @Html.DisplayText("DOB")
     <hr />
-    9 @Html.DisplayNameFor(x => x.DOB)<br />
+    9 @Html.DisplayNameFor(x => x.DOB)
+    <br />
     10 @Html.DisplayTextFor(x => x.DOB)
     <hr />
-    11 @Html.Display("DOB")<br />
-    12 @Html.DisplayFor(x => x.DOB)<hr/>
+    11 @Html.Display("DOB")
+    <br />
+    12 @Html.DisplayFor(x => x.DOB)
+    <hr />
 
     13 @Html.DisplayForModel()
 
-    
-</body>
 
-</html>
-<style>
-    .display-label{
-        width:400px;
-        background-color:pink;
-        padding:5px;
-        border-radius:3px;
-    }
-    .display-field {
-        width: 350px;
-        background-color: blueviolet;
-        padding: 5px;
-        border-radius: 3px;
-        margin-left:50px;
-    }
-</style>
+
+    <style>
+        .display-label {
+            width: 400px;
+            background-color: pink;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .display-field {
+            width: 350px;
+            background-color: blueviolet;
+            padding: 5px;
+            border-radius: 3px;
+            margin-left: 50px;
+        }
+    </style>

@@ -2,7 +2,7 @@
 @model  WebApplication3.Models.Employee
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -20,16 +20,22 @@
         <div class="container">
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("persondetails with stronly binding", "GetPesronDetailsForm", "Person")</li>
+                    <li>@Html.ActionLink("persondetails with out stronly binding", "Index", "Person")</li>
                     <li>@Html.ActionLink("PassDataFromViewToController", "PassDataFromViewToController", "Home")</li>
                     <li>  @Html.ActionLink("Part11", "part11", "Home")<br /></li>
 
-                    <li>  @Html.ActionLink("students page", "GetAllStudent","Student")<br /></li>
+                    <li>  @Html.ActionLink("students page", "GetAllStudent", "Student")<br /></li>
                     <li>  @Html.ActionLink("ViewBag and ViewData", "VBVD", "Home")<br /></li>
                     <li>
                         @Html.ActionLink("Student Address Page", "StudentAddress", "Student", new { id = 1, stradd = "123centerlanr" }, null)
                         <br />
                     </li>
-
+                    <li>
+                       
+                        @Html.ActionLink("Studen", "GetStudentAddress","Student",new {id=1},null)
+                        <br />
+                    </li>
                     <li>
                         @Html.ActionLink("Index Page", "Index", "Student")
                         <br />

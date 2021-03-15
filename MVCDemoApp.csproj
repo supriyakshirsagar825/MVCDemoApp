@@ -200,6 +200,10 @@
     <Content Include="Views\Person\PostPersonDetails.cshtml" />
     <Content Include="Views\Person\GetPesronDetailsForm.cshtml" />
     <Content Include="Views\Person\persondetailswithstronlybinding.cshtml" />
+    <Content Include="Views\Shared\_LayoutTest.cshtml" />
+    <Content Include="Views\Person\Index1.cshtml" />
+    <Content Include="Views\Person\Index2.cshtml" />
+    <Content Include="Views\Shared\_NewLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

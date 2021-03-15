@@ -13,7 +13,7 @@ namespace WebApplication3.Controllers
         [HttpGet]
         public ActionResult PassDataFromViewToController()
         {
-            return View();
+            return View("PassDataFromViewToController", "_NewLayout");
         }
         [HttpPost]
 

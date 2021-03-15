@@ -1,26 +1,13 @@
 ﻿@model WebApplication3.Models.Person
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        @using (Html.BeginForm("PostPersonDetails", "Person", FormMethod.Post))
-        {
-            @Html.DisplayName("FirstName") @Html.TextBox("FirstName") @Html.ValidationMessage("FirstName")  <br/>
-            @Html.DisplayName("LastName") @Html.TextBox("LastName") @Html.ValidationMessage("LastName")  <br />
-            @Html.DisplayName("Age") @Html.TextBox("Age") @Html.ValidationMessage("Age") <br />
-            @Html.DisplayName("Email")@Html.TextBox("Email") @Html.ValidationMessage("Email") <br />
-            @Html.DisplayName("Salary")@Html.TextBox("Salary") @Html.ValidationMessage("Salary") <br />
-            <input type="submit" value="sumitform"/>
-        }
-    </div>
-</body>
-</html>
+<div>
+    @using (Html.BeginForm("PostPersonDetails", "Person", FormMethod.Post))
+    {
+        @Html.DisplayName("FirstName") @Html.TextBox("FirstName") @Html.ValidationMessage("FirstName") <br />
+        @Html.DisplayName("LastName") @Html.TextBox("LastName") @Html.ValidationMessage("LastName") <br />
+        @Html.DisplayName("Age") @Html.TextBox("Age") @Html.ValidationMessage("Age") <br />
+        @Html.DisplayName("Email")@Html.TextBox("Email") @Html.ValidationMessage("Email") <br />
+        @Html.DisplayName("Salary")@Html.TextBox("Salary") @Html.ValidationMessage("Salary") <br />
+        <input type="submit" value="sumitform" />
+    }
+ </div>
