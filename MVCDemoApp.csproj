@@ -126,6 +126,7 @@
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TempDataController.cs" />
+    <Compile Include="Controllers\testController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="CustomHelper.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\test\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
