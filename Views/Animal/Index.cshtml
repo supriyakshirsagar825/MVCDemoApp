@@ -1,0 +1,20 @@
+﻿@section FirstSectionForName{
+
+    <div>
+        @using (Html.BeginForm("Index1", "Animal"))
+        {
+            @Html.TextBox("txtName")
+            <input type="submit" value="submit data" />
+        }
+    </div>
+    <h4>  @ViewBag.Name </h4>
+
+}
+<h2>Index</h2>
+
+@section  RenderFooter{
+    <h4>  @ViewBag.Name </h4>
+}
+
+
+

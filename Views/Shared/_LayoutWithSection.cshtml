@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_LayoutWithSection</title>
+</head>
+<body>
+    <header style="height:200px; background-color:burlywood"><h4>Header</h4> 
+    Please Provide Name From View Page @RenderSection("FirstSectionForName", required: false) </header>
+    <div>
+        @RenderBody()
+    </div>
+   
+    <footer style="height:200px; background-color:coral"><h4> Footer </h4>
+    Plase provide Data for footer section @RenderSection("RenderFooter",required:true)
+    </footer>
+
+</body>
+</html>
