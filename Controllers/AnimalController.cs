@@ -19,5 +19,15 @@ namespace WebApplication3.Controllers
             ViewBag.Name = txtName;
             return View("Index", "_LayoutWithSection");
         }
+
+
+        public ActionResult PageFirst()
+        {
+            return View();
+        }
+        public ActionResult PageSecond()
+        {
+            return View();
+        }
     }
 }

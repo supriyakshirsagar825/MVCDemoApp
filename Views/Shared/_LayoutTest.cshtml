@@ -11,7 +11,10 @@
     <title>_LayoutTest</title>
 </head>
 <body>
-    <header style=" height:100px; background-color:palevioletred">this is header part</header>
+    <header style=" height:100px; background-color:palevioletred">
+        this is header part
+        @RenderPage("~/Views/Animal/PageSecond.cshtml","Supriya","Kshirsagr","supriya@gmail.com",1234567890)
+    </header>
     <div style="background-color:hotpink"> 
         @RenderBody()
     </div>

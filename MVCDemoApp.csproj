@@ -207,6 +207,8 @@
     <Content Include="Views\Shared\_NewLayout.cshtml" />
     <Content Include="Views\Shared\_LayoutWithSection.cshtml" />
     <Content Include="Views\Animal\Index.cshtml" />
+    <Content Include="Views\Animal\PageFirst.cshtml" />
+    <Content Include="Views\Animal\PageSecond.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
